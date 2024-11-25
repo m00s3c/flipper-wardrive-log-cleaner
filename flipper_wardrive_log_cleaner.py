@@ -3,7 +3,7 @@ import os
 def process_file(input_path, output_path):
     # preheader lines
     preheader_lines = [
-        "WigleWifi-1.4,appRelease=1.0.0,model=Flipper Zero,release=1.0.3,device=Flipper Zero,display=Monochrome LCD,board=Flipper Main,brand=Flipper Devices\n",
+        "WigleWifi-1.4,appRelease=2.0,model=S33,release=XtremeFW,device=Flipper Zero,display=Monochrome LCD,board=ESP32,brand=Flipper Devices\n",
         "MAC,SSID,AuthMode,FirstSeen,Channel,RSSI,CurrentLatitude,CurrentLongitude,AltitudeMeters,AccuracyMeters,Type\n"
     ]
 
@@ -36,10 +36,10 @@ def process_file(input_path, output_path):
 
 
 if __name__ == "__main__":
-    input_file = "wardrive_4.log" 
-    output_file = "processed_wardrive_4.log" 
+    input_file = "wardrive_0.log" 
+    output_file = "processed_wardrive_0.log" 
 
     if os.path.exists(input_file):
         process_file(input_file, output_file)
     else:
-        print(f"Input file '{input_file}' does not exist.")
+        print(f"input file '{input_file}' does not exist.")
