@@ -10,7 +10,7 @@ A Python script designed to clean and process Flipper Zero wardrive log files fo
 ## Prerequisites
 
 - Python 3.6 or higher
-- A wardrive log file (`wardrive_0.log`)
+- A wardrive log file (e.g. `wardrive_0.log`)
 
 ## How to Use
 
@@ -20,7 +20,7 @@ A Python script designed to clean and process Flipper Zero wardrive log files fo
     ```
     
 2. **Replace your log file**:
-   Ensure your wardrive log file (`wardrive_0.log`) is in the same directory as the script.
+   Ensure your wardrive log file (e.g. `wardrive_0.log`) is in the same directory as the script.
 
 3. **Run the script**:
    ```bash
