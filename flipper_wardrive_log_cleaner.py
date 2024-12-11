@@ -32,14 +32,20 @@ def process_file(input_path, output_path):
     with open(output_path, 'w') as file:
         file.writelines(processed_lines)
 
-    print(f"output saved to: {output_path}, now go upload to wigle!")
+    print(f"Output saved to: {output_path}, now go upload to WiGLE!")
 
 
 if __name__ == "__main__":
-    input_file = "wardrive_0.log" 
-    output_file = "processed_wardrive_0.log" 
+    input_directory = "./logs"  # Directory containing input .log files
+    output_directory = "./processed_logs"  # Directory for output .log files
 
-    if os.path.exists(input_file):
-        process_file(input_file, output_file)
-    else:
-        print(f"input file '{input_file}' does not exist.")
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+
+    # Process each .log file in the input directory
+    for filename in os.listdir(input_directory):
+        if filename.endswith(".log"):
+            input_file = os.path.join(input_directory, filename)
+            output_file = os.path.join(output_directory, f"processed_{filename}")
+            process_file(input_file, output_file)
+            
