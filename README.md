@@ -1,6 +1,6 @@
 # Flipper Zero/Marauder Wardrive Log File Cleaner
 
-A Python script designed to clean and process Flipper Zero wardrive log files for seamless WiGLE uploads.
+A Python script designed to clean and process Flipper Zero wardrive log files for WiGLE uploads.
 
 - Processes multiple .log files in a directory at once.
 - Removes text above the first relevant line in the input file.
